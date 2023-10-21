@@ -1,0 +1,32 @@
+
+
+    <h1>Your Cart</h1>
+    {% if products %}
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Description</th>
+                    <th>Price</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for product in products %}
+                    <tr>
+                        <td>{{ product.name }}</td>
+                        <td>{{ product.description }}</td>
+                        <td>${{ product.price }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        <p>Total Price: ${{ total_price }}</p>
+    {% else %}
+        <p>Your cart is empty.</p>
+    {% endif %}
+
+    <style>
+        td{
+            padding:20px
+        }
+    </style>

@@ -1,0 +1,7 @@
+Installations =>
+Python 
+Django
+
+Migrations =>
+py manage.py makemigrations store
+py manage.py migrate

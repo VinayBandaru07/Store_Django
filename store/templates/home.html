@@ -1,0 +1,13 @@
+
+<h1>Welcome to Our Store</h1>
+    <div style="display: flex; flex-wrap: wrap;">
+        {% for product in products %}
+            <div style="border: 1px solid #ccc; margin: 10px; padding: 10px; width: 300px;">
+                <h2 style="font-size: 1.5rem;">{{ product.name }}</h2>
+                <p style="font-size: 1rem;">{{ product.description }}</p>
+                <p style="font-size: 1rem;">Price: ${{ product.price }}</p>
+                <a href="{% url 'product_detail' product.id %}" style="text-decoration: none; color: #007bff; font-size: 1rem;">View Details</a>
+            </div>
+        {% endfor %}
+</div>
+
